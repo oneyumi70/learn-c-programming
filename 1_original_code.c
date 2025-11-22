@@ -6,9 +6,9 @@ int main(void) {
     int num1, num2, op, result1, result2;
     
     srand((unsigned)time(NULL));
-    num1 = rand() % 10 / (RAND_MAX + 1);
-    num2 = rand() % 10 / (RAND_MAX + 1);
-    op = rand() % 3 / (RAND_MAX + 1);
+    num1 = rand() % 10 + 1;  // Generate number 1-10
+    num2 = rand() % 10 + 1;  // Generate number 1-10
+    op = rand() % 4;         // Generate 0-3 for 4 operations
     
     switch(op) {
         case 0:
@@ -39,7 +39,7 @@ int main(void) {
             break;
             
         case 3:
-            printf("%d%%d=", num1, num2);
+            printf("%d/%d=", num1, num2);  // Fixed the printf format
             scanf("%d", &result1);
             printf("余数为 = ");
             scanf("%d", &result2);
